@@ -5,7 +5,7 @@ class AppConstants {
   static const String appDescription = 'A comprehensive rental management application for Indian landlords and tenants';
   
   // API Configuration
-  static const String baseUrl = 'http://localhost:3000/api';
+  static const String baseUrl = 'https://jsonplaceholder.typicode.com'; // Mock API for testing
   static const String apiVersion = 'v1';
   
   // User Roles

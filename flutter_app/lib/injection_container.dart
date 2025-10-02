@@ -6,7 +6,7 @@ import 'core/storage/local_storage.dart';
 import 'core/storage/secure_storage.dart';
 
 // Data Sources
-import 'data/datasources/remote/auth_remote_datasource.dart';
+import 'data/datasources/remote/auth_remote_datasource_mock.dart';
 import 'data/datasources/local/auth_local_datasource.dart';
 
 // Repositories
@@ -33,7 +33,7 @@ Future<void> init() async {
         getCurrentUserUseCase: sl(),
       ));
 
-  // TODO: Register other BLoCs when implemented
+  // TODO: Register other BLoCs when their implementations are complete
 
   //! Use cases
   // Auth
@@ -56,7 +56,7 @@ Future<void> init() async {
 
   //! Data sources
   sl.registerLazySingleton<AuthRemoteDataSource>(
-    () => AuthRemoteDataSourceImpl(sl()),
+    () => AuthRemoteDataSourceMock(), // Using mock implementation for development
   );
 
   sl.registerLazySingleton<AuthLocalDataSource>(
@@ -66,7 +66,7 @@ Future<void> init() async {
   // TODO: Implement other data sources when needed
 
   //! Core
-  sl.registerLazySingleton(() => ApiClient());
+  sl.registerLazySingleton(() => ApiClient(sl()));
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl());
   sl.registerLazySingleton<LocalStorage>(() => LocalStorageImpl());
   sl.registerLazySingleton<SecureStorage>(() => SecureStorageImpl());
