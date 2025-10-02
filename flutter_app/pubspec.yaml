@@ -1,0 +1,135 @@
+name: rental_management_app
+description: A comprehensive rental management application for Indian landlords and tenants
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Core Dependencies
+  flutter_bloc: ^8.1.3
+  get_it: ^7.6.4
+  dio: ^5.3.2
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  connectivity_plus: ^5.0.1
+  equatable: ^2.0.5
+  dartz: ^0.10.1
+  
+  # UI Dependencies
+  flutter_svg: ^2.0.7
+  cached_network_image: ^3.3.0
+  shimmer: ^3.0.0
+  lottie: ^2.6.0
+  image_picker: ^1.0.4
+  file_picker: ^6.1.1
+  
+  # Payment Dependencies
+  razorpay_flutter: ^1.3.6
+  
+  # PDF and Documents
+  pdf: ^3.10.4
+  printing: ^5.11.0
+  
+  # Utility Dependencies
+  intl: ^0.19.0
+  url_launcher: ^6.1.14
+  share_plus: ^7.2.1
+  permission_handler: ^11.0.1
+  device_info_plus: ^9.1.0
+  package_info_plus: ^4.2.0
+  
+  # Network and Storage
+  path_provider: ^2.1.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Date and Time
+  table_calendar: ^3.0.9
+  
+  # Authentication
+  local_auth: ^2.1.6
+  crypto: ^3.0.3
+  
+  # Internationalization
+  flutter_localizations:
+    sdk: flutter
+  
+  # Icons and Fonts
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+  
+  # JSON Serialization
+  json_annotation: ^4.8.1
+  
+  # HTTP and API
+  http: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Linting and Analysis
+  flutter_lints: ^3.0.1
+  very_good_analysis: ^5.1.0
+  
+  # Testing
+  mockito: ^5.4.2
+  bloc_test: ^9.1.4
+  mocktail: ^1.0.1
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  freezed: ^2.4.6
+  hive_generator: ^2.0.1
+  
+  # Assets
+  flutter_gen_runner: ^5.3.2
+
+flutter_gen:
+  output: lib/core/
+  line_length: 80
+  integrations:
+    flutter_svg: true
+    lottie: true
+
+flutter:
+  uses-material-design: true
+  
+  # Assets
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+    - assets/fonts/
+  
+  # Fonts
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+
+# Additional configurations
+dependency_overrides:
+  # Override dependencies if needed for compatibility
